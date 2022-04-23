@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Watermelon {
-    public static void main(String[] args) {
-        int w;
-        Scanner sc = new Scanner(System.in);
-        w = sc.nextInt();
+    public boolean weight(int w){
+       // if ( w <= 0)
+           // throw new IllegalArgumentException("weight must be positive integer");
+
         if (w % 2==0 && w != 2)
-            System.out.println("Yes");
+        return true;
         else
-         System.out.println("No");
+        return false;
     }
 }

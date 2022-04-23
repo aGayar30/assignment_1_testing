@@ -1,25 +1,19 @@
 import java.util.Scanner;
 
 public class physics {
-    public static void main(String[] args) {
-
-        int n, x, y, z, sumX = 0, sumY = 0, sumZ = 0;
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-
+    public boolean eq(int n, int x[], int y[], int z[]) {
+        if (n <= 0)
+            throw new IllegalArgumentException("n must be positive integer");
+        int sumX = 0, sumY = 0, sumZ = 0;
         while (n > 0) {
-            x = sc.nextInt();
-            y = sc.nextInt();
-            z = sc.nextInt();
-            sumX += x;
-            sumY += y;
-            sumZ += z;
+            sumX += x[n-1];
+            sumY += y[n-1];
+            sumZ += z[n-1];
             n--;
         }
         if (sumX == 0 && sumY == 0 && sumZ == 0)
-            System.out.println("Yes");
-
+            return true;
         else
-            System.out.println("No");
+            return false;
     }
 }
